@@ -1,0 +1,161 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20190907121712
+Username: WIN16-NTMS\Administrator
+RunAs User: WIN16-NTMS\Administrator
+Machine: WIN16-NTMS (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Process ID: 3868
+PSVersion: 5.1.14393.693
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.693
+BuildVersion: 10.0.14393.693
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\ScriptHistory\day5.txt
+PS WSMan:\localhost\Listener\Listener_1084132640> Get-Service | Export-Csv -Path c:\service.csv
+PS WSMan:\localhost\Listener\Listener_1084132640> Get-Service | Export-Csv -Path c:\service.csv -Delimiter "," -Append
+PS WSMan:\localhost\Listener\Listener_1084132640> Enter-PSSession -ComputerName rkesh -Port 5986 -UseSSL -SessionOption $session -Credential $credential
+Enter-PSSession : Connecting to remote server rkesh failed with the following error message : The WinRM client cannot 
+process the request because the server name cannot be resolved. For more information, see the 
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rkesh -Port 5986 -UseSSL -SessionOption ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rkesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+Enter-PSSession : Connecting to remote server rkesh failed with the following error message : The WinRM client cannot process the request because the server name cannot be resolved. For more information, see the
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rkesh -Port 5986 -UseSSL -SessionOption ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rkesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+
+PS WSMan:\localhost\Listener\Listener_1084132640> $credential=Get-Credential
+PS WSMan:\localhost\Listener\Listener_1084132640> Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOption $session -Credential $credential
+Enter-PSSession : Connecting to remote server rakesh failed with the following error message : The WinRM client cannot 
+process the request because the server name cannot be resolved. For more information, see the 
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOptio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rakesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+Enter-PSSession : Connecting to remote server rakesh failed with the following error message : The WinRM client cannot process the request because the server name cannot be resolved. For more information, see the
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOptio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rakesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+
+PS WSMan:\localhost\Listener\Listener_1084132640> Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOption $session -Credential $credential
+Enter-PSSession : Connecting to remote server rakesh failed with the following error message : The WinRM client cannot 
+process the request because the server name cannot be resolved. For more information, see the 
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOptio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rakesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+Enter-PSSession : Connecting to remote server rakesh failed with the following error message : The WinRM client cannot process the request because the server name cannot be resolved. For more information, see the
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOptio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rakesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+
+PS WSMan:\localhost\Listener\Listener_1084132640> $session=New-PSSessionOption -SkipCACheck -SkipCNCheck
+PS WSMan:\localhost\Listener\Listener_1084132640> Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOption $session -Credential $credential
+Enter-PSSession : Connecting to remote server rakesh failed with the following error message : The WinRM client cannot 
+process the request because the server name cannot be resolved. For more information, see the 
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOptio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rakesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+Enter-PSSession : Connecting to remote server rakesh failed with the following error message : The WinRM client cannot process the request because the server name cannot be resolved. For more information, see the
+about_Remote_Troubleshooting Help topic.
+At line:1 char:1
++ Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOptio ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (rakesh:String) [Enter-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+
+PS WSMan:\localhost\Listener\Listener_1084132640> $credential=Get-Credential
+>> TerminatingError(Get-Credential): "Cannot process command because of one or more missing mandatory parameters: Credential."
+Get-Credential : Cannot process command because of one or more missing mandatory parameters: Credential.
+At line:1 char:13
++ $credential=Get-Credential
++             ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Credential], ParameterBindingException
+    + FullyQualifiedErrorId : MissingMandatoryParameter,Microsoft.PowerShell.Commands.GetCredentialCommand
+Get-Credential : Cannot process command because of one or more missing mandatory parameters: Credential.
+At line:1 char:13
++ $credential=Get-Credential
++             ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Credential], ParameterBindingException
+    + FullyQualifiedErrorId : MissingMandatoryParameter,Microsoft.PowerShell.Commands.GetCredentialCommand
+
+PS WSMan:\localhost\Listener\Listener_1084132640> Set-Item wsman:\localhost\Client\TrustedHosts -Value 192.168.1.57 -Concatenate -Force
+PS WSMan:\localhost\Listener\Listener_1084132640> $credential=Get-Credential
+PS WSMan:\localhost\Listener\Listener_1084132640> Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOption $session -Credential $credential
+PS WSMan:\localhost\Listener\Listener_1084132640> exit
+PS WSMan:\localhost\Listener\Listener_1084132640> c:
+PS C:\Users\Administrator> Get-PSSession
+PS C:\Users\Administrator> Enter-PSSession -ComputerName rakesh -Port 5986 -UseSSL -SessionOption $session -Credential $credential
+PS C:\Users\Administrator> $credential=Get-Credential
+PS C:\Users\Administrator> $session=New-PSSessionOption -SkipCACheck -SkipCNCheck
+PS C:\Users\Administrator> $newsession=New-PSSession -ComputerName rakesh -port 5986 -UseSSL -SessionOption $session -Credential $credential
+New-PSSession : [rakesh] Connecting to remote server rakesh failed with the following error message : Access is denied. 
+For more information, see the about_Remote_Troubleshooting Help topic.
+At line:1 char:13
++ $newsession=New-PSSession -ComputerName rakesh -port 5986 -UseSSL -Se ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.Manageme....RemoteRunspace:RemoteRunspace) [New-PSSession], 
+PSRemotingTransportException
+    + FullyQualifiedErrorId : AccessDenied,PSSessionOpenFailed
+New-PSSession : [rakesh] Connecting to remote server rakesh failed with the following error message : Access is denied. For more information, see the about_Remote_Troubleshooting Help topic.
+At line:1 char:13
++ $newsession=New-PSSession -ComputerName rakesh -port 5986 -UseSSL -Se ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.Manageme....RemoteRunspace:RemoteRunspace) [New-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : AccessDenied,PSSessionOpenFailed
+PS C:\Users\Administrator> $newsession = New-PSSession -ComputerName rakesh -port 5986 -UseSSL -SessionOption $session -Credential $credential
+New-PSSession : [rakesh] Connecting to remote server rakesh failed with the following error message : Access is denied. 
+For more information, see the about_Remote_Troubleshooting Help topic.
+At line:1 char:15
++ ... ewsession = New-PSSession -ComputerName rakesh -port 5986 -UseSSL -Se ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.Manageme....RemoteRunspace:RemoteRunspace) [New-PSSession], 
+PSRemotingTransportException
+    + FullyQualifiedErrorId : AccessDenied,PSSessionOpenFailed
+New-PSSession : [rakesh] Connecting to remote server rakesh failed with the following error message : Access is denied. For more information, see the about_Remote_Troubleshooting Help topic.
+At line:1 char:15
++ ... ewsession = New-PSSession -ComputerName rakesh -port 5986 -UseSSL -Se ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (System.Manageme....RemoteRunspace:RemoteRunspace) [New-PSSession], PSRemotingTransportException
+    + FullyQualifiedErrorId : AccessDenied,PSSessionOpenFailed
+PS C:\Users\Administrator> $credential=Get-Credential
+PS C:\Users\Administrator> $session=New-PSSessionOption -SkipCACheck -SkipCNCheck
+PS C:\Users\Administrator> $newsession = New-PSSession -ComputerName rakesh -port 5986 -UseSSL -SessionOption $session -Credential $credential
+PS C:\Users\Administrator> Enter-PSSession -Session $newsession
+PS C:\Users\Administrator> Enter-PSSession -Session $newsession
+PS C:\Users\Administrator> Get-PSSession
+
+ Id Name            ComputerName    ComputerType    State         ConfigurationName     Availability
+ -- ----            ------------    ------------    -----         -----------------     ------------
+ 20 Session20       rakesh          RemoteMachine   Opened        Microsoft.PowerShell     Available
+
+
+PS C:\Users\Administrator> Get-PSSession -ComputerName rakesh | Disconnect-PSSession
+**********************
+Windows PowerShell transcript end
+End time: 20190907124842
+**********************
